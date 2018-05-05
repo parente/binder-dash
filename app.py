@@ -1,4 +1,5 @@
 # adapted from https://dash.plot.ly/getting-started
+# TODO: https://github.com/jupyterhub/jupyterhub/blob/master/jupyterhub/singleuser.py#L407
 import os
 import dash
 import dash_core_components as dcc
