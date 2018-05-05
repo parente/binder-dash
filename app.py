@@ -1,9 +1,10 @@
-# from https://dash.plot.ly/getting-started
+# adapted from https://dash.plot.ly/getting-started
+import os
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
 
-app = dash.Dash()
+app = dash.Dash(url_base_pathname=os.getenv('JUPYTERHUB_SERVICE_PREFIX', '/'))
 
 app.layout = html.Div(children=[
     html.H1(children='Hello Dash'),
@@ -27,4 +28,4 @@ app.layout = html.Div(children=[
 ])
 
 if __name__ == '__main__':
-    app.run_server(debug=True, port=8888)
+    app.run_server(port=8888)
